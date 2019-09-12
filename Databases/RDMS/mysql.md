@@ -6,19 +6,35 @@
 select user,host from mysql.user;
 ```
 
+### Create a new user in mysql ###
+```
+create user 'bullhacks3'@'localhost' identified by  'bullhacks3';
+```
+
+### Grant privileges to the user
+```
+grant privileges on * . * to 'bullhacks3'@'localhost';
+```
+
+### Reload the permissions
+```
+flush privileges;
+```
+
 ### Login using a root user ###
 ```
-mysql -u root -p
+mysql -u root -p;
 ```
 It will prompt for the password to be entered
 
 ### Login using specific user ###
 ```
-mysql -u username -p password
+mysql -u username -p password;
 ```
 
 ### Create a database ###
-```
+
+```  
 create database bullhacks3;
 ```
 
@@ -56,12 +72,71 @@ l_name varchar(30)
 );
 ```
 
-### Insert data into a table
+### Deleta a database ###
+```
+drop database database_name;
+```
+
+### Delete a table
+```
+drop table table_name;
+```
+
+### Insert data into a table each by row
 ```
 insert into table_name values(1,"Bakul","Gupta")
 insert into table_name values(2,"Bull","Hacks3")
 insert into table_name values(3,"Chef","Hydra")
 ```
+
+### Insert multiple rows in a table
+```
+insert into table_name values(1,"Bakul","Gupta"),(2,"Bull","Hacks3),(3,"Chef","Hydra");
+```
+
+### Truncate a table ###
+It is used to delete all the entries from a table
+```
+truncate table_name;
+```
+
+### Delete a table
+Used to delete all entries or specific entries from a table ,but the structure of table remains
+```
+delete from table_name;
+```
+
+### Update a table
+```
+update table table_name set id=3 where f_name='Bull';
+```
+
+### Add a new column to table
+```
+alter table table_name add column column_name data_type;
+```
+
+### Modify the data_type of a table
+```
+alter table table_name modify column column_name data_type;
+```
+
+### Using like in query ###
+It returns all the results where the column f_name begins with d or D
+```
+select * from table_name where f_name like 'd%';
+```
+
+Returns all the results where the column f_name ends with d or F
+```
+select * from table_name where f_name like '%f';
+```
+
+Returns all the results where the column f_name contains exactly three characters
+```
+select * from table_name where f_name like '___';
+```
+
 
 
 
