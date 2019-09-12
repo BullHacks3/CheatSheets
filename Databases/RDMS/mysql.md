@@ -137,6 +137,36 @@ Returns all the results where the column f_name contains exactly three character
 select * from table_name where f_name like '___';
 ```
 
+### Creation of Index ###
+Index helps to fetch the results faster, so the fields that are frequently used are indexed in the mysql
+```
+create index index_name on table_name(column_name);
+```
+
+### Remove an Index from database
+```
+drop index index_name;
+```
 
 
+### Primary Key in database
+```
+create table name_info (
+id int,
+f_name varchar(30),
+l_name varchar(30),
+PRIMARY KEY(id)
+);
+```
+
+### Foreign Key in database
+```
+create table living (
+id int,
+living_id int,
+city varchar(30),
+PRIMARY KEY(id),
+FOREIGN KEY(living_id) REFERENCES name_info(id)
+);
+```
 
