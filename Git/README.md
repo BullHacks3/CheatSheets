@@ -1,5 +1,3 @@
-changed file
-
 ### Various Commands Used in Git ##
 
 ### Initialize a new git directory
@@ -61,4 +59,15 @@ git log --grep=search
 ```
 git commit --amend
 ```
+
+### Modifying a staged file
+```
+git reset HEAD <file_name>
+```
+### Unmodifying  a modified file
+```
+git checkout -- <file_name>
+```
+
+
 
