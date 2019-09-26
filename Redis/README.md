@@ -39,4 +39,7 @@ GET name:lname
 ECHO "Hello Lukab"
 ```
 
-
+### Delete all data from redis
+```
+FLUSHALL redis
+```

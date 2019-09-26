@@ -170,3 +170,14 @@ FOREIGN KEY(living_id) REFERENCES name_info(id)
 );
 ```
 
+
+### Inner Join query ###
+Returns the results where the column is present in the both  the tables
+```
+select t.column1,y.column2 
+from table1 as t 
+inner join
+table2 as y
+on t.column3=y.column4;
+```
+ 

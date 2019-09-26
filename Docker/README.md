@@ -11,7 +11,7 @@ docker ps
 docker ps -a 
 ```
 
-### Delete the all the exited container  
+### Delete all the exited container  
 ```
 docker rm $(docker ps -a -q -f status=exited)
 ```
